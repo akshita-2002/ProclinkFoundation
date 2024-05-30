@@ -2,7 +2,7 @@
 
 - javascript code is written within the tag script before the closing body tag at the end.
 
-## Variable declaration
+## VARIABLE DECLARATION
 
 - var x =10;
 - to get type of the variable => typeof(x)
@@ -34,7 +34,7 @@ typeof t; // will return object (it is a bug, was not fixed as many websites wil
 console.log(); // to get output printed
 ```
 
-## Type of Declarations
+## TYPES OF DECLARATIONS
 
 - var -
 
@@ -223,3 +223,42 @@ const sum1 = (a, b) => a + b;
   - Extensibility (new features should be easily added)
   - Testability ( must be testable)
   - Performance (space and time complexity)
+
+
+## COPY BY VALUE & COPY BY REFERENCE
+ - Copy by reference is copying the address
+ ```js
+ const t1 = [40,50,60];
+ const t2=t1; //the changes made in either will effect the other
+ ```
+
+ - copy by value
+```js
+ var q1 = [100,200];
+ var q2 = [...q1]; //only the values of q1 are copied the changes made in q1 will not effect q2 .The ... is called spread operator.
+
+ var q3 = [60,...q1,90,40]; //output: 60,100,200,90,40
+```
+
+ ## DIFFERENT for LOOPS
+
+ - for loop-more control
+ ```js
+ const marks = [80,90,100];
+for(let i = 0;i<marks.length;i++){
+        console.log("Index: ",i,"Marks: ",marks[i]);
+}
+```
+ - for..of - readable and cleaner but no control over indexes
+ ```js
+ for(let mark of marks){
+    console.log("Mark:",mark);
+ }
+ ```
+
+ - for..in - more readable and simple nut can't increase index more than one
+ ```js
+ for(let idx in marks){
+    console.log("Index: ",idx,"Marks:",marks[idx]);
+ }
+ ```
