@@ -262,3 +262,26 @@ for(let i = 0;i<marks.length;i++){
     console.log("Index: ",idx,"Marks:",marks[idx]);
  }
  ```
+
+ ## ES6 Features
+ 
+- let & const
+ - (```)Template literal
+ - (...)Spread operator
+ - (...)Rest Operator
+ - Destructuring
+ - Class
+ - Arrow Fucntion
+
+
+## MORE ON OBJECTS
+ ```js
+ let salaries = {
+  John : 100,
+  Pete : 300,
+  Mary : 250,
+ }
+
+ Object.keys(salaries);
+ Object.values(salaries);
+ 

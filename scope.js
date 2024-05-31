@@ -32,7 +32,7 @@
 
 //   console.log(all);
 
-
+ 
 const movies = [
     { title: "Inception", ratings: [5, 4, 5, 4, 5] },
     { title: "Interstellar", ratings: [5, 5, 4, 5, 4] },
