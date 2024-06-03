@@ -74,6 +74,8 @@
 // const movieUrl = (domain, genre, year) => `http://${domain}?genere=${genre}&year=${year}`;
   
 //   console.log(movieUrl("imdb.com", "thriller", 2020));
+
+
 const cart = [
     { name: "Apple", price: 0.5, quantity: 4 },
     { name: "Banana", price: 0.25, quantity: 6 },
