@@ -33,35 +33,64 @@
 //   console.log(all);
 
  
-const movies = [
-    { title: "Inception", ratings: [5, 4, 5, 4, 5] },
-    { title: "Interstellar", ratings: [5, 5, 4, 5, 4] },
-    { title: "Dunkirk", ratings: [4, 4, 4, 3, 4] },
-    { title: "The Dark Knight", ratings: [5, 5, 5, 5, 5] },
-    { title: "Memento", ratings: [4, 5, 4, 5, 4] },
+// const movies = [
+//     { title: "Inception", ratings: [5, 4, 5, 4, 5] },
+//     { title: "Interstellar", ratings: [5, 5, 4, 5, 4] },
+//     { title: "Dunkirk", ratings: [4, 4, 4, 3, 4] },
+//     { title: "The Dark Knight", ratings: [5, 5, 5, 5, 5] },
+//     { title: "Memento", ratings: [4, 5, 4, 5, 4] },
+//   ];
+
+
+// function getAvg(ratings){
+//     var sum = 0;
+//     for(let i=0;i<ratings.length;i++){
+//         sum+=ratings[i];
+//     }
+//     return sum/ratings.length;
+// }
+
+// var topRated = null;
+// var highAvg = 0;
+
+// for(var i=0;i<movies.length;i++){
+//     var avgRating = getAvg(movies[i].ratings);
+//     if(avgRating > highAvg){
+//         highAvg=avgRating;
+//         topRated = movies[i];
+//     } 
+// }
+
+// console.log(topRated.title);
+
+
+
+// 
+// const movieUrl = (domain, genre, year) => {
+//     return "http://" + domain + "?genere=" + genre + "&year=" + year;
+//   };
+  
+//   console.log(movieUrl("imdb.com", "thriller", 2020));
+// const movieUrl = (domain, genre, year) => `http://${domain}?genere=${genre}&year=${year}`;
+  
+//   console.log(movieUrl("imdb.com", "thriller", 2020));
+const cart = [
+    { name: "Apple", price: 0.5, quantity: 4 },
+    { name: "Banana", price: 0.25, quantity: 6 },
   ];
+  
+  const newItems = [
+    { name: "Cherry", price: 0.75, quantity: 5 },
+    { name: "Date", price: 1, quantity: 3 },
+  ];
+  
 
 
-function getAvg(ratings){
-    var sum = 0;
-    for(let i=0;i<ratings.length;i++){
-        sum+=ratings[i];
-    }
-    return sum/ratings.length;
-}
+  let allItems = [...cart,...newItems];
+  let total = 0;
+  
+  for(const{price,quantity} of allItems){
+    total += price * quantity;
+  }
 
-var topRated = null;
-var highAvg = 0;
-
-for(var i=0;i<movies.length;i++){
-    var avgRating = getAvg(movies[i].ratings);
-    if(avgRating > highAvg){
-        highAvg=avgRating;
-        topRated = movies[i];
-    } 
-}
-
-console.log(topRated.title);
-
-
-
+  console.log("The cart total is: ",total);

@@ -213,7 +213,7 @@ const sum1 = (a, b) => a + b;
 ```
 
 - Anonymous Function
-- IIFE (Pattern) 
+- IIFE (Pattern)
 
 ### MEASURING CODE QUALITY
 
@@ -224,64 +224,258 @@ const sum1 = (a, b) => a + b;
   - Testability ( must be testable)
   - Performance (space and time complexity)
 
-
 ## COPY BY VALUE & COPY BY REFERENCE
- - Copy by reference is copying the address
- ```js
- const t1 = [40,50,60];
- const t2=t1; //the changes made in either will effect the other
- ```
 
- - copy by value
+- Copy by reference is copying the address
+
 ```js
- var q1 = [100,200];
- var q2 = [...q1]; //only the values of q1 are copied the changes made in q1 will not effect q2 .The ... is called spread operator.
-
- var q3 = [60,...q1,90,40]; //output: 60,100,200,90,40
+const t1 = [40, 50, 60];
+const t2 = t1; //the changes made in either will effect the other
 ```
 
- ## DIFFERENT for LOOPS
+- copy by value
 
- - for loop-more control
- ```js
- const marks = [80,90,100];
-for(let i = 0;i<marks.length;i++){
-        console.log("Index: ",i,"Marks: ",marks[i]);
+```js
+var q1 = [100, 200];
+var q2 = [...q1]; //only the values of q1 are copied the changes made in q1 will not effect q2 .The ... is called spread operator.
+
+var q3 = [60, ...q1, 90, 40]; //output: 60,100,200,90,40
+```
+
+## DIFFERENT for LOOPS
+
+- for loop-more control
+
+```js
+const marks = [80, 90, 100];
+for (let i = 0; i < marks.length; i++) {
+  console.log("Index: ", i, "Marks: ", marks[i]);
 }
 ```
- - for..of - readable and cleaner but no control over indexes
- ```js
- for(let mark of marks){
-    console.log("Mark:",mark);
- }
- ```
 
- - for..in - more readable and simple nut can't increase index more than one
- ```js
- for(let idx in marks){
-    console.log("Index: ",idx,"Marks:",marks[idx]);
- }
- ```
+- for..of - readable and cleaner but no control over indexes
 
- ## ES6 Features
- 
-- let & const
- - (```)Template literal
- - (...)Spread operator
- - (...)Rest Operator
- - Destructuring
- - Class
- - Arrow Fucntion
+```js
+for (let mark of marks) {
+  console.log("Mark:", mark);
+}
+```
+
+- for..in - more readable and simple nut can't increase index more than one
+
+```js
+for (let idx in marks) {
+  console.log("Index: ", idx, "Marks:", marks[idx]);
+}
+```
+
+## ES6 Features
+
+- ### let & const
+- ### (```)TEMPLATE LITERAL
+
+```js
+function fullname(firstname, lastname) {
+  return "Welcome " + lastname + "," + firstname + "!!";
+}
+```
+
+template literal can be used to make this code more readable
+
+```js
+//Refactoring - quality better & functionality same
+function fullname(firstname, lastname) {
+  return `Welcome ${lastname}, ${firstname} !!`;
+} //called as interpolation
+```
+
+` => supports multiline string
+
+- ### (...)SPREAD OPERATOR
+- ### (...)REST OPERATOR
+
+```js
+var[t1,t2,...t3]=[10,50,60,70,50,80,90]; => t3=60,70,50,80,90 //colllects the values 
+//if the ... is before = then it is rest and if it is to the right of = then spread
+```
+- ### DESTRUCTURING
+  - unpacking the elements in a array
+
+```js
+const [t1, t2] = [100, 200]; // t1=100 , t2=200
+
+const [t1, t2, t3] = [100, 200];
+console.log(t1, t2, t3); // t3 will be undefined
+```
+
+```js
+//destructuring
+const [t1, t2, t3 = 80] = [100, 200];
+console.log(t1, t2, t3); // t1=100,t2=200,t3=80 => we are unpacking the array ,t3=80 is called default value
+// default will taken only when t3 is undefined
+```
+
+```js
+const [t1, t2, t3 = 80] = [100, 200, 500];
+console.log(t1, t2, t3); // t1=100, t2=200, t3=500 as t3 is not undefined
+```
+
+```js
+const [t1, t2, t3 = 80] = [100, 200, null];
+console.log(t1, t2, t3); //t1=100 , t2=200, t3=null as null is also a value
+```
+
+```js
+const [t1, t2, t3 = 80] = [100, 200, undefined];
+console.log(t1, t2, t3); //t1=100, t2=200 , t3=80
+
+//holes can be used to skip the value
+const [, t1, t2, t3 = 80] = [100, 200, null]; //holes
+console.log(t1, t2, t3); //t1=200, t2=null , t3=80
+```
+
+- Oject Destructuring
+
+```js
+const { name, networth, power } = {
+  name: "Tony Stark",
+  house: "Canada",
+  networth: 100,
+  power: "Fight",
+};
+
+console.log(name); //instead of console.log(avenger.name)
+console.log(networth);
+console.log(power);
+console.log(skill); //undefined
+```
+
+```js
+const {
+  name,
+  networth,
+  power,
+  skill = ["genius", "playboy"],
+} = {
+  name: "Tony Stark",
+  house: "Canada",
+  networth: 100,
+  power: "Fight",
+};
+
+console.log(skill); //["genius","playboy"];
+```
+
+- ### CLASS
+- ### ARROW FUNCTION
+- ### NUMERIC SEPARATORS 1_00_00_000
+```js
+  var num = 1_00_00_000 => 10000000
+```
+- ### (??) NULLISH COHERIENCE
+  - the falsy table has only two values for this operator => null and undefiend
+  ```js
+  var avgtemp = 20;
+  var temp = 0 ?? avgtemp; // temp = 0
+
 
 
 ## MORE ON OBJECTS
- ```js
- let salaries = {
-  John : 100,
-  Pete : 300,
-  Mary : 250,
- }
 
- Object.keys(salaries);
- Object.values(salaries);
- 
+```js
+let salaries = {
+  John: 100,
+  Pete: 300,
+  Mary: 250,
+};
+
+Object.keys(salaries); // Output: ['John','Pete','Mary']
+Object.values(salaries); // Output: [100,300,250]
+```
+
+## TERNARY OPERATOR
+
+```js
+5 > 4 ? "Awesome" : "Cool";
+```
+
+## BINARY OPERATOR
+
+- Airthmetic +,-,/,*
+- Logical &&, || , ^
+- Relational >,<,>=,<=,==,===
+
+```js
+var height = 150;
+var final = 140 || height; // final = 140
+```
+```js
+var height = 150;
+var final = 0 || height;  //final = 150
+```
+## UNARY OPERATOR
+
+- ++,--
+- !
+
+## TRUTHY vs FALSY
+- if the value gets converted to true => truthy
+
+```js
+let x="cool";
+
+if(x){
+  console.log("Hey 😊😊");
+} else{
+  console.log("Nope 👻");
+}      // output : Hey 😊😊 , implicit conversion is taking place, x is converting to boolean
+```
+- for null,NaN,"",0 => it gets converted to false => falsy => check the document if there then falsy otherwise truthy 
+https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+```js
+let x=null;
+
+if(x){
+  console.log("Hey 😊😊");
+} else{
+  console.log("Nope 👻");
+}  
+```
+```js
+let x=[];
+
+if(x){
+  console.log("Hey 😊😊");
+} else{
+  console.log("Nope 👻");
+} // output: Hey
+```
+
+
+## METHODS
+- toUpperCase()
+```js
+"Nithin".toUpperCase();
+```
+- split()
+```js
+"This is a beautiful day".split(" ") //OUtput=> ['This','is','a','beautiful','day']
+
+"This is a beautiful day".split("") // splits every character and stores in array
+```
+- join()
+```js
+['This','is','a','beautiful','day'].join("|") //Output=> 'This|is|a|beautiful|day'
+```
+- push()
+```js
+[1,2,3].push(4,5) => [1,2,3,4,5]
+```
+- reverse() => reverses the array
+
+- slice()
+```js
+[1,2,3,4,5].slice(2,3) //output [3] => extracts elements starting from index 2 excluding 3
+
+[1,2,3,4,5].slice(0,5) // this gives all elements in array => used to copy
+```
