@@ -1,4 +1,4 @@
-# Intro To JAVASCRIPT
+# INTRO To JAVASCRIPT
 
 - javascript code is written within the tag script before the closing body tag at the end.
 
@@ -479,3 +479,42 @@ if(x){
 
 [1,2,3,4,5].slice(0,5) // this gives all elements in array => used to copy
 ```
+
+## CODING STANDARDS
+- coding standards are meant to have unifromity through out your code base
+- variables => camel case and understandable / descriptive. Cannot start with numbers or use reserved keywords. Cannot use special symbols($,@,#,!)  except "_". 
+```js
+let age = 50;
+let studentName = "Akshita";
+```
+- classes => start with capital(Pascel case)
+- DRY (dont repeat yourself) 
+- choose 'let' over 'var', 'const' over 'let' => so that other developers know that it cannot be changed.
+```js
+let panCard = "BRP00067"; ❌
+const PAN_CARD = "BRP00067"; ✅
+const marks = [10,20,40]; ✅
+```
+
+## DOCUMENTATION
+- Single comment
+```js
+//
+```
+- Multiple Comment
+```js
+/**
+ * This is cool
+ * function
+ * 
+ */
+```
+![alt text](<Screenshot (9).png>)
+- this is called js doc
+- @param means parameter
+- number means datatype
+- @returns {number} => the return type of function is also number.
+- @example => give a example of the function
+
+
+> ESLint => help to check errors in javascript. To enforce coding standards.

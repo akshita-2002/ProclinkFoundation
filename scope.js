@@ -76,23 +76,47 @@
 //   console.log(movieUrl("imdb.com", "thriller", 2020));
 
 
-const cart = [
-    { name: "Apple", price: 0.5, quantity: 4 },
-    { name: "Banana", price: 0.25, quantity: 6 },
-  ];
+// const cart = [
+//     { name: "Apple", price: 0.5, quantity: 4 },
+//     { name: "Banana", price: 0.25, quantity: 6 },
+//   ];
   
-  const newItems = [
-    { name: "Cherry", price: 0.75, quantity: 5 },
-    { name: "Date", price: 1, quantity: 3 },
-  ];
+//   const newItems = [
+//     { name: "Cherry", price: 0.75, quantity: 5 },
+//     { name: "Date", price: 1, quantity: 3 },
+//   ];
   
 
 
-  let allItems = [...cart,...newItems];
-  let total = 0;
+//   let allItems = [...cart,...newItems];
+//   let total = 0;
   
-  for(const{price,quantity} of allItems){
-    total += price * quantity;
-  }
+//   for(const{price,quantity} of allItems){
+//     total += price * quantity;
+//   }
 
-  console.log("The cart total is: ",total);
+//   console.log("The cart total is: ",total);
+
+ /**
+ * Multiplies two numbers.
+ * @param {number} x - The first number.
+ * @param {number} y - The second number.
+ * @returns {number} The product of x and y.
+ * @example
+ * multiply(2, 3); // returns 6
+ */
+function multiply(x, y) {
+  return x * y;
+}
+
+// Write a function to make it uppercase
+/**
+ * 
+ * @param {string} text - input string
+ * @returns {string} - Converts the string to upper case
+ * @example 
+ * upperCase("Akshita"); //returns "AKSHITA"
+ */
+function upperCase(text){
+   return text.toUpperCase();
+}

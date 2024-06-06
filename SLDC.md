@@ -40,18 +40,25 @@ Service based is only a one time thing, only one customer is involved.
 - Waterfall - 6 months to release a version. 
 - Agile - its a cyclic process 
 
-- Implentation of Agile:
+### Implentation of Agile:
   1. Scrum is the framework used to do work in agile.(Implementation of agile).
   ![alt text](<Screenshot (6).png>)
   2. Sprint Planning - It is a meeting for planning. It take 1 hr for sprint planning and task is divided into small chunks.
-  3. Story points are estimates to complete a particular work.
+  3. Story points are estimates to complete a particular work. => Manager provides priorities for tak=sks.
   4. Blocker -> anything that stops or slows down the delivery of a product, or acts as a hurdle for the product.( a person is stuck somewhere)
   5. Standup Meetings -> Daily meetings (10-15 min). What happened yesterday and what to do today.
   6. Review Meeting -> meeting after each sprint( after 14 days)
   7. Sprint Retrospective -> What can be improved. Also happens after every sprint.
 
 - ![ ](<Screenshot (7).png>) => kanban board is a tool used to manage sprint.
+
+- after the tickets in this development board are moved to done they are moved to QA testing board (looks same like kanban board).
+
 - peer review => the code is reviewed by other developers.
 
 ![ ](<Screenshot (8).png>)
 - burn down chart is the graph of the sprint. It shows whether the tasks are completed accordingly or not. 
+
+- spill-over => tasks pushed to next sprint,if not completed in the current sprint.
+
+- Reviewer checks the code quality, after reviewer checks the tickets move to done status.
