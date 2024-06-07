@@ -211,16 +211,16 @@ v18.0.1 => 18 -> major version  ( major changes break the API)
 3. Reduces the risk & avoids errors(Back up)
 4. Change management is smooth
 
-#### Release Management 
-1. Planning ( proper plan when the relase should happen) => to implement the plan
+#### Release Management => Pass service
+1. Planning ( proper plan when the relase should happen) => to implement the plan (Branching Strategy)
 
-2. Governance => access level for each branch (Branching Strategy)
+2. Governance => access level for each branch  
 
 3. Scheduling => proper schedule to manage release, through sprints
 
 4. Automation => CI/CD (To reduce human errors)
 
 5. Contigency => backups , rollback to older version
+![alt text](<Screenshot (23).png>) 
 
-
-
+- We ugligy the code to reduce the time of download in browser

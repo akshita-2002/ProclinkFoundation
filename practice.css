@@ -1,0 +1,30 @@
+h1{
+    font-size:54px;
+    
+    font-style: italic;
+    color: crimson;
+    letter-spacing:5px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration:dotted;
+    line-height: 1.5;
+    font-family: Jacquard 24 Charted;
+}
+.hobbies{
+    border :5px solid green;
+    border-style: dashed;
+}
+
+
+.first{
+    height: 58;
+    width:150;
+    background-color: hsl(201.87deg 100% 81.18%);
+      margin-right:900px; 
+    padding:10px;
+    border-radius: 10px;
+    font-family:Roboto Condensed;
+    border-left: 8px solid hsl(201.86deg 100% 53.73%) ;
+
+}
+

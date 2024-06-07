@@ -373,6 +373,7 @@ console.log(skill); //["genius","playboy"];
   var num = 1_00_00_000 => 10000000
 ```
 - ### (??) NULLISH COHERIENCE
+   - The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
   - the falsy table has only two values for this operator => null and undefiend
   ```js
   var avgtemp = 20;
